@@ -22,12 +22,12 @@
         <div class="header__logo-container">
           <div class="header__logo-img-cont">
             <img
-              src="./assets/png/john-doe.png"
-              alt="Ram Maheshwari Logo Image"
+              src="./assets/png/david-adeyemi.jpg"
+              alt="David Adeyemi Logo Image"
               class="header__logo-img"
             />
           </div>
-          <span class="header__logo-sub">John Doe</span>
+          <span class="header__logo-sub">David Adeyemi</span>
         </div>
         <div class="header__main">
           <ul class="header__links">
@@ -84,16 +84,20 @@
     </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">Project 1</h1>
+        <h1 class="heading-primary">Cocoa Disease Classifier</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-            in numquam incidunt earum quaerat cum fuga, atque similique natus
-            nobis sit.
+            A smart web-based application that helps farmers detect cocoa plant
+            diseases early using image recognition.
           </p>
         </div>
         <div class="project-cs-hero__cta">
-          <a href="#" class="btn btn--bg" target="_blank">Live Link</a>
+          <a
+            href="https://cocoa-cnn-classify-webapp.vercel.app/index.html"
+            class="btn btn--bg"
+            target="_blank"
+            >Live Link</a
+          >
         </div>
       </div>
     </section>
@@ -102,7 +106,7 @@
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont">
             <img
-              src="./assets/jpeg/project-mockup-example.jpeg"
+              src="./assets/jpeg/project1-mockup.png"
               alt="Project Image"
               class="project-details__showcase-img"
             />
@@ -111,20 +115,50 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Project Overview</h3>
               <p class="project-details__desc-para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                alias tenetur minus quaerat aliquid, aut provident blanditiis,
-                deleniti aspernatur ipsam eaque veniam voluptatem corporis vitae
-                mollitia laborum corrupti ullam rem. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Neque alias tenetur minus quaerat
-                aliquid, aut provident blanditiis, deleniti aspernatur ipsam
-                eaque veniam voluptatem corporis vitae mollitia laborum corrupti
-                ullam rem?
+                Cocoa Care is an intelligent, web-based decision support system
+                designed to assist cocoa farmers in the early detection and
+                management of plant diseases. The platform leverages modern
+                machine learning techniques to analyze images of cocoa leaves
+                and provide accurate, real-time diagnoses, helping farmers take
+                timely and informed actions to protect their crops.
               </p>
               <p class="project-details__desc-para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                alias tenetur minus quaerat aliquid, aut provident blanditiis,
-                deleniti aspernatur ipsam eaque veniam voluptatem corporis vitae
-                mollitia laborum corrupti ullam rem?
+                At its core, the system is built using Flask as the backend
+                framework, ensuring a lightweight and scalable web architecture.
+                The disease classification engine is powered by a deep learning
+                model developed with TensorFlow, specifically a DenseNet121
+                architecture that has been trained on labeled cocoa leaf images.
+                This model was selected for its strong performance and ability
+                to generalize well across different disease patterns, achieving
+                high accuracy in classification tasks.
+              </p>
+              <p class="project-details__desc-para">
+                Users interact with the system through a simple and intuitive
+                interface where they can upload images of affected cocoa leaves.
+                Once an image is submitted, it is processed by the trained
+                model, which extracts relevant features and predicts the most
+                likely disease category. The result is then presented to the
+                user along with basic information about the disease, enabling
+                quicker understanding and response.
+              </p>
+              <p class="project-details__desc-para">
+                To support accessibility and real-world deployment, the
+                application can be exposed to external users using Ngrok,
+                allowing it to run locally while still being reachable via the
+                internet. This is particularly useful during development and
+                testing phases. The model itself is hosted and managed via
+                Kaggle, ensuring easy version control, reproducibility, and
+                integration with training datasets.
+              </p>
+              <p class="project-details__desc-para">
+                Cocoa Care addresses a critical challenge in agriculture—limited
+                access to timely and accurate disease diagnosis, especially in
+                rural farming communities. By digitizing and automating the
+                diagnostic process, the system reduces dependency on manual
+                inspection and agricultural experts, which are often scarce.
+                Ultimately, the project aims to improve crop yield, reduce
+                losses, and promote sustainable cocoa farming practices through
+                the integration of artificial intelligence into agriculture.
               </p>
             </div>
             <div class="project-details__tools-used">
@@ -133,27 +167,25 @@
                 <div class="skills__skill">HTML</div>
                 <div class="skills__skill">CSS</div>
                 <div class="skills__skill">JavaScript</div>
-                <div class="skills__skill">React</div>
-                <div class="skills__skill">SASS</div>
-                <div class="skills__skill">GIT</div>
-                <div class="skills__skill">Shopify</div>
-                <div class="skills__skill">Wordpress</div>
-                <div class="skills__skill">Google ADS</div>
-                <div class="skills__skill">Facebook Ads</div>
-                <div class="skills__skill">Android</div>
-                <div class="skills__skill">IOS</div>
+                <div class="skills__skill">Python</div>
+                <div class="skills__skill">Kaggle</div>
+                <div class="skills__skill">Ngrok</div>
+                <div class="skills__skill">Vercel</div>
+                <div class="skills__skill">Tensorflow</div>
+                <div class="skills__skill">Google Colab</div>
+                <div class="skills__skill">Github</div>
               </div>
             </div>
             <div class="project-details__links">
               <h3 class="project-details__content-title">See Live</h3>
               <a
-                href="#"
+                href="https://cocoa-cnn-classify-webapp.vercel.app/index.html"
                 class="btn btn--med btn--theme project-details__links-btn"
                 target="_blank"
                 >Live Link</a
               >
               <a
-                href="#"
+                href="https://github.com/1demilade/cocoa-cnn-classify-webapp"
                 class="btn btn--med btn--theme-inv project-details__links-btn"
                 target="_blank"
                 >Code Link</a
@@ -171,35 +203,55 @@
               <span>Social</span>
             </h2>
             <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="#">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/david-adeyemi-209313274/"
+              >
                 <img
                   class="main-footer__icon"
                   src="./assets/png/linkedin-ico.png"
                   alt="icon"
                 />
               </a>
-              <a target="_blank" rel="noreferrer" href="#">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/1demilade"
+              >
                 <img
                   class="main-footer__icon"
                   src="./assets/png/github-ico.png"
                   alt="icon"
                 />
               </a>
-              <a target="_blank" rel="noreferrer" href="#">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://x.com/demi_yemi4"
+              >
                 <img
                   class="main-footer__icon"
-                  src="./assets/png/twitter-ico.png"
+                  src="./assets/png/x-ico.png"
                   alt="icon"
                 />
               </a>
-              <a target="_blank" rel="noreferrer" href="#">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="http://www.youtube.com/@demilade6644"
+              >
                 <img
                   class="main-footer__icon"
                   src="./assets/png/yt-ico.png"
                   alt="icon"
                 />
               </a>
-              <a target="_blank" rel="noreferrer" href="#">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.instagram.com/dt.yems/"
+              >
                 <img
                   class="main-footer__icon main-footer__icon--mr-none"
                   src="./assets/png/insta-ico.png"
@@ -209,19 +261,16 @@
             </div>
           </div>
           <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt">John Doe</h4>
+            <h4 class="heading heading-sm text-lt">David Adeyemi</h4>
             <p class="main-footer__short-desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit facilis
-              tempora explicabo quae quod deserunt
+              Always learning, always building, always improving.
             </p>
           </div>
         </div>
 
         <div class="main-footer__lower">
           &copy; Copyright 2021. Made by
-          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
-            >Ram Maheshwari</a
-          >
+          <a rel="noreferrer" target="_blank" href="#">David Adeyemi</a>
         </div>
       </div>
     </footer>
