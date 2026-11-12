@@ -1,0 +1,361 @@
+@import '@fontsource/red-hat-display/700.css';
+@import '@fontsource/red-hat-display/900.css';
+@import '@fontsource/red-hat-text/400.css';
+@import '@fontsource/red-hat-text/500.css';
+@import '@fontsource/red-hat-text/700.css';
+
+:root {
+  /* Ground and ink */
+  --bg: #f5f6f8;
+  --surface: #e9ebef;
+  --surface-2: #dde0e6;
+  --ink: #141826;
+  --muted: #4a5163;
+
+  /* Fields, taken from the work: Uno blue, L298N red, motor yellow, CocoaCare green, Aso & Thread etu */
+  --blue: #0f5fa6;
+  --blue-ink: #ffffff;
+  --red: #c8232c;
+  --red-ink: #ffffff;
+  --yellow: #f4c20d;
+  --yellow-ink: #141826;
+  --green: #2f7a3b;
+  --green-ink: #ffffff;
+  --etu: #171a2b;
+  --etu-ink: #f2efe8;
+
+  /* Pale tints for highlights and light fields */
+  --tint-blue: #cfe3f6;
+  --tint-red: #f8d3cf;
+  --tint-yellow: #fbe38a;
+  --tint-green: #d3ead5;
+
+  --accent: var(--blue);
+
+  /* Type */
+  --font-display: 'Red Hat Display', 'Segoe UI', system-ui, sans-serif;
+  --font-text: 'Red Hat Text', 'Segoe UI', system-ui, sans-serif;
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-sub: clamp(1.75rem, 1rem + 2.2vw, 2.75rem);
+  --step-head: clamp(2.5rem, 1.2rem + 5vw, 5.5rem);
+
+  /* Frame */
+  --margin: clamp(16px, 2.4vw, 32px);
+  --section-gap: clamp(112px, 14vw, 200px);
+  --radius: 6px;
+  --max: 1440px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --press: 160ms;
+
+  color-scheme: light;
+  scrollbar-color: var(--muted) var(--surface);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: var(--step-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: clip;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+dl,
+dd,
+figure,
+blockquote {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.22em;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+::selection {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.on-field :focus-visible,
+.field-blue :focus-visible,
+.field-red :focus-visible,
+.field-green :focus-visible,
+.field-etu :focus-visible {
+  outline-color: var(--yellow);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--margin);
+  top: 12px;
+  z-index: 50;
+  padding: 10px 16px;
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: var(--radius);
+  transform: translateY(-160%);
+  transition: transform 200ms var(--ease-out);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+/* Layout helpers */
+.frame {
+  padding-inline: var(--margin);
+}
+
+.small {
+  font-size: var(--step-small);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* Fields */
+.field-blue {
+  background: var(--blue);
+  color: var(--blue-ink);
+}
+.field-red {
+  background: var(--red);
+  color: var(--red-ink);
+}
+.field-yellow {
+  background: var(--yellow);
+  color: var(--yellow-ink);
+}
+.field-green {
+  background: var(--green);
+  color: var(--green-ink);
+}
+.field-etu {
+  background: var(--etu);
+  color: var(--etu-ink);
+}
+
+/* Buttons: one shape, one radius, flat fills */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--font-text);
+  font-weight: 700;
+  font-size: var(--step-body);
+  line-height: 1.1;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    transform var(--press) var(--ease-out),
+    background-color 200ms ease;
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.button--accent {
+  background: var(--blue);
+  color: #fff;
+}
+
+.button--light {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.button svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  transition: transform 200ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    background: var(--blue);
+    color: #fff;
+  }
+  .button--accent:hover {
+    background: var(--ink);
+  }
+  .button--light:hover {
+    background: var(--yellow);
+    color: var(--ink);
+  }
+  .button:hover svg {
+    transform: translateX(3px);
+  }
+}
+
+/* Text links with an underline that draws in */
+.text-link {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 3px;
+}
+
+.text-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: currentColor;
+  transform-origin: right;
+  transition: transform 260ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .text-link:hover::after {
+    transform: scaleX(0);
+  }
+}
+
+/* Entrances: content is visible by default; only hidden once the script has started */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 700ms var(--ease-out),
+    transform 900ms var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 80ms);
+}
+
+.js [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Clip reveals act on the picture inside, so the observed box itself stays measurable */
+.js [data-reveal='clip'] {
+  opacity: 1;
+  transform: none;
+}
+
+.js [data-reveal='clip'] > img {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 850ms var(--ease-in-out);
+  transition-delay: calc(var(--i, 0) * 80ms);
+}
+
+.js [data-reveal='clip'].is-in > img {
+  clip-path: inset(0 0 0 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .js [data-reveal],
+  .js [data-reveal='clip'] > img {
+    clip-path: none;
+  }
+  .js [data-reveal='clip'] {
+    transform: none;
+    transition: opacity 300ms ease;
+    transition-delay: 0ms;
+  }
+  .button,
+  .button svg {
+    transition: background-color 200ms ease;
+  }
+  .button:active {
+    transform: none;
+  }
+}

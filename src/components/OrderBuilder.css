@@ -1,0 +1,275 @@
+/* A real interface fragment (data-ui): it keeps Aso & Thread's own look,
+   sanyan ground, etu ink, square corners, so it reads as that product. */
+.order {
+  --sanyan: #e6e0d4;
+  --sanyan-deep: #d9d1c1;
+  --etu: #171a2b;
+  --alaari: #8e1f33;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  background: var(--sanyan);
+  color: var(--etu);
+  font-family: 'Red Hat Text', system-ui, sans-serif;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.order__controls {
+  display: grid;
+  gap: 22px;
+  align-content: start;
+  padding: clamp(20px, 3vw, 36px);
+}
+
+.order__name {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: var(--step-sub);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.order__price {
+  margin-top: 6px;
+  font-size: var(--step-body);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.order__group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.order__group legend,
+.order__label {
+  display: block;
+  margin-bottom: 10px;
+  padding: 0;
+  font-weight: 700;
+  font-size: var(--step-body);
+}
+
+.order__group legend span {
+  margin-left: 6px;
+  font-weight: 400;
+  color: #4d4b55;
+}
+
+.order__swatches,
+.order__sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.order__swatch,
+.order__size {
+  position: relative;
+  cursor: pointer;
+}
+
+.order__swatch input,
+.order__size input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.order__swatch {
+  width: 48px;
+  height: 48px;
+  padding: 5px;
+  background: var(--sanyan-deep);
+  transition: transform var(--press) var(--ease-out);
+}
+
+.order__swatch::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--swatch);
+}
+
+.order__swatch:has(input:checked) {
+  box-shadow: inset 0 0 0 3px var(--alaari); /* taste-skill-ignore: selected ring inside the data-ui fragment */
+}
+
+.order__size span {
+  display: grid;
+  place-items: center;
+  min-width: 52px;
+  height: 46px;
+  padding: 0 14px;
+  background: var(--sanyan-deep);
+  font-weight: 500;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    transform var(--press) var(--ease-out);
+}
+
+.order__size:has(input:checked) span {
+  background: var(--etu);
+  color: var(--sanyan);
+}
+
+.order__swatch:active,
+.order__size:active span {
+  transform: scale(0.96);
+}
+
+.order__swatch:has(input:focus-visible),
+.order__size:has(input:focus-visible) span {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.order__stepper {
+  display: inline-flex;
+  align-items: center;
+  background: var(--sanyan-deep);
+}
+
+.order__stepper button {
+  width: 46px;
+  height: 46px;
+  border: 0;
+  background: transparent;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: transform var(--press) var(--ease-out);
+}
+
+.order__stepper button:active:not(:disabled) {
+  transform: scale(0.9);
+}
+
+.order__stepper button:disabled {
+  color: #8d8a90;
+  cursor: not-allowed;
+}
+
+.order__stepper output {
+  min-width: 32px;
+  text-align: center;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.order__message {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 12px;
+  padding: clamp(20px, 3vw, 36px);
+  background: var(--etu);
+  color: var(--sanyan);
+}
+
+.order__message .order__label {
+  margin: 0;
+}
+
+.order__pre {
+  margin: 0;
+  font-family: 'Red Hat Text', system-ui, sans-serif;
+  font-size: var(--step-small);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.order__pre[data-touched] .order__line {
+  animation: order-flash 900ms var(--ease-out);
+}
+
+@keyframes order-flash {
+  from {
+    background: rgb(244 194 13 / 0.45);
+  }
+  to {
+    background: transparent;
+  }
+}
+
+.order__copy {
+  position: relative;
+  display: grid;
+  justify-self: start;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 0;
+  background: var(--alaari);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform var(--press) var(--ease-out);
+}
+
+.order__copy:active {
+  transform: scale(0.97);
+}
+
+.order__copy:focus-visible {
+  outline-color: var(--yellow);
+}
+
+.order__copy-face {
+  grid-area: 1 / 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    opacity 200ms ease,
+    filter 200ms ease,
+    transform 200ms var(--ease-out);
+}
+
+.order__copy-face svg {
+  width: 18px;
+  height: 18px;
+}
+
+.order__copy-face--done,
+.order__copy[data-copied] .order__copy-face:not(.order__copy-face--done) {
+  opacity: 0;
+  filter: blur(2px);
+  transform: scale(0.96);
+}
+
+.order__copy[data-copied] .order__copy-face--done {
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
+.order__note {
+  font-size: var(--step-small);
+  color: #c9c3b8;
+}
+
+@media (max-width: 760px) {
+  .order {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .order__line {
+    animation: none;
+  }
+  .order__swatch,
+  .order__size span,
+  .order__stepper button,
+  .order__copy,
+  .order__copy-face {
+    transition: opacity 200ms ease;
+  }
+}

@@ -1,0 +1,187 @@
+/* The contact card: a flat red field, the pitch on the left and the form on the right. */
+.coupon {
+  --split: 44%;
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--split) 1fr;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.coupon__stub {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  padding: clamp(28px, 4vw, 56px);
+}
+
+.coupon__title {
+  font-size: var(--step-sub);
+  text-transform: uppercase;
+}
+
+.coupon__text {
+  max-width: 34ch;
+  font-size: var(--step-body);
+}
+
+.coupon__form {
+  display: grid;
+  gap: 10px;
+  padding: clamp(28px, 4vw, 56px);
+}
+
+.coupon__row {
+  display: grid;
+  gap: 6px;
+}
+
+.coupon input,
+.coupon select,
+.coupon textarea {
+  width: 100%;
+  min-height: 54px;
+  padding: 14px 16px;
+  border: 0;
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  font-size: var(--step-body);
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  transition: outline-color 160ms ease, background-color 160ms ease;
+}
+
+.coupon textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+.coupon select {
+  appearance: none;
+  background-image: none;
+  cursor: pointer;
+  padding-right: 44px;
+}
+
+.coupon__row:has(select) {
+  position: relative;
+}
+
+.coupon__row:has(select)::after {
+  content: '';
+  position: absolute;
+  right: 20px;
+  bottom: 22px;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.coupon select option {
+  color: var(--ink);
+  background: #fff;
+}
+
+.coupon ::placeholder {
+  color: #5b6172;
+  opacity: 1;
+}
+
+.coupon input:focus,
+.coupon select:focus,
+.coupon textarea:focus {
+  outline-color: var(--ink);
+}
+
+.coupon [aria-invalid='true'] {
+  outline: 3px solid var(--yellow);
+  outline-offset: 2px;
+}
+
+.coupon__error {
+  font-size: var(--step-small);
+  font-weight: 700;
+  color: #fff;
+}
+
+.coupon__error::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--yellow);
+  vertical-align: 1px;
+}
+
+.coupon__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  margin-top: 6px;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--step-body);
+  cursor: pointer;
+  transition:
+    transform var(--press) var(--ease-out),
+    background-color 200ms ease;
+}
+
+.coupon__submit svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 200ms var(--ease-out);
+}
+
+.coupon__submit:active {
+  transform: scale(0.97);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .coupon__submit:hover svg {
+    transform: translateX(3px);
+  }
+}
+
+.coupon__status {
+  min-height: 1.5em;
+  font-size: var(--step-small);
+}
+
+.coupon__status a {
+  font-weight: 700;
+}
+
+@media (max-width: 899px) {
+  .coupon {
+    --split: 0;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+  }
+
+  .coupon__stub {
+    padding-bottom: 0;
+  }
+}
+
+.coupon__label {
+  font-weight: 700;
+  font-size: var(--step-small);
+}
+
+.coupon__form {
+  background: #b51f27;
+}

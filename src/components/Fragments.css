@@ -1,0 +1,79 @@
+/* Interface fragments (data-ui): small, exact panels that carry real data. */
+.frag {
+  margin: 0;
+  padding: clamp(16px, 2vw, 24px);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  font-size: var(--step-small);
+  line-height: 1.4;
+}
+
+.frag table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.frag caption,
+.frag figcaption {
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 700;
+  font-size: var(--step-small);
+}
+
+.frag th,
+.frag td {
+  padding: 7px 0;
+  text-align: right;
+  border-bottom: 1px solid var(--surface-2);
+}
+
+.frag th:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+.frag thead th {
+  font-weight: 500;
+  color: var(--muted);
+  font-size: var(--step-small);
+}
+
+.frag tfoot th,
+.frag tfoot td {
+  border-bottom: 0;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.frag--compact th,
+.frag--compact td {
+  padding: 5px 0;
+}
+
+.frag--parts dl {
+  display: grid;
+}
+
+.frag--parts dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--surface-2); /* taste-skill-ignore: row rules inside the data-ui parts label */
+}
+
+.frag--parts dl > div:last-child {
+  border-bottom: 0;
+}
+
+.frag--parts dt {
+  color: var(--muted);
+}
+
+.frag--parts dd {
+  text-align: right;
+  font-weight: 500;
+}

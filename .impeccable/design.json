@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-31T18:00:00Z",
+  "title": "Design System: David Adeyemi",
+  "extensions": {
+    "colorMeta": {
+      "cool-white": { "role": "neutral", "displayName": "Cool White", "canonical": "#f5f6f8", "tonalRamp": ["oklch(18% 0.006 265)", "oklch(30% 0.006 265)", "oklch(42% 0.006 265)", "oklch(54% 0.006 265)", "oklch(66% 0.006 265)", "oklch(78% 0.005 265)", "oklch(88% 0.004 265)", "oklch(97% 0.003 265)"] },
+      "surface-grey": { "role": "neutral", "displayName": "Surface Grey", "canonical": "#e9ebef", "tonalRamp": ["oklch(18% 0.008 265)", "oklch(30% 0.008 265)", "oklch(42% 0.008 265)", "oklch(54% 0.008 265)", "oklch(66% 0.008 265)", "oklch(78% 0.007 265)", "oklch(93% 0.006 265)", "oklch(97% 0.003 265)"] },
+      "rule-grey": { "role": "neutral", "displayName": "Rule Grey", "canonical": "#dde0e6", "tonalRamp": ["oklch(18% 0.01 265)", "oklch(30% 0.01 265)", "oklch(42% 0.01 265)", "oklch(54% 0.01 265)", "oklch(66% 0.01 265)", "oklch(78% 0.009 265)", "oklch(90% 0.008 265)", "oklch(97% 0.003 265)"] },
+      "indigo-ink": { "role": "neutral", "displayName": "Indigo Ink", "canonical": "#141826", "tonalRamp": ["oklch(16% 0.03 275)", "oklch(24% 0.03 275)", "oklch(36% 0.03 275)", "oklch(48% 0.025 275)", "oklch(60% 0.02 275)", "oklch(72% 0.015 275)", "oklch(85% 0.01 275)", "oklch(95% 0.005 275)"] },
+      "slate-muted": { "role": "neutral", "displayName": "Slate Muted", "canonical": "#4a5163", "tonalRamp": ["oklch(18% 0.025 270)", "oklch(28% 0.025 270)", "oklch(44% 0.025 270)", "oklch(54% 0.022 270)", "oklch(65% 0.018 270)", "oklch(76% 0.013 270)", "oklch(87% 0.008 270)", "oklch(96% 0.004 270)"] },
+      "uno-blue": { "role": "primary", "displayName": "Uno Blue", "canonical": "#0f5fa6", "tonalRamp": ["oklch(18% 0.06 252)", "oklch(28% 0.1 252)", "oklch(38% 0.13 252)", "oklch(48% 0.14 252)", "oklch(60% 0.12 252)", "oklch(72% 0.09 252)", "oklch(88% 0.045 252)", "oklch(96% 0.015 252)"] },
+      "l298n-red": { "role": "secondary", "displayName": "L298N Red", "canonical": "#c8232c", "tonalRamp": ["oklch(20% 0.07 25)", "oklch(32% 0.12 25)", "oklch(44% 0.17 25)", "oklch(54% 0.2 25)", "oklch(64% 0.17 25)", "oklch(75% 0.11 25)", "oklch(88% 0.05 25)", "oklch(96% 0.015 25)"] },
+      "motor-yellow": { "role": "secondary", "displayName": "Motor Yellow", "canonical": "#f4c20d", "tonalRamp": ["oklch(22% 0.05 90)", "oklch(34% 0.08 90)", "oklch(48% 0.11 90)", "oklch(62% 0.14 90)", "oklch(74% 0.16 88)", "oklch(83% 0.17 88)", "oklch(91% 0.12 92)", "oklch(97% 0.04 95)"] },
+      "cocoa-green": { "role": "secondary", "displayName": "Cocoa Green", "canonical": "#2f7a3b", "tonalRamp": ["oklch(18% 0.04 145)", "oklch(28% 0.07 145)", "oklch(40% 0.1 145)", "oklch(52% 0.12 145)", "oklch(64% 0.11 145)", "oklch(76% 0.08 145)", "oklch(90% 0.04 145)", "oklch(97% 0.012 145)"] },
+      "etu-night": { "role": "tertiary", "displayName": "Etu Night", "canonical": "#171a2b", "tonalRamp": ["oklch(16% 0.035 280)", "oklch(22% 0.035 280)", "oklch(34% 0.03 280)", "oklch(46% 0.025 280)", "oklch(58% 0.02 280)", "oklch(72% 0.015 280)", "oklch(85% 0.01 280)", "oklch(95% 0.005 280)"] },
+      "etu-paper": { "role": "tertiary", "displayName": "Etu Paper", "canonical": "#f2efe8", "tonalRamp": ["oklch(20% 0.01 85)", "oklch(32% 0.012 85)", "oklch(44% 0.012 85)", "oklch(56% 0.012 85)", "oklch(68% 0.011 85)", "oklch(80% 0.01 85)", "oklch(90% 0.009 85)", "oklch(95.5% 0.008 85)"] },
+      "tint-blue": { "role": "tertiary", "displayName": "Diagram Blue Tint", "canonical": "#cfe3f6", "tonalRamp": ["oklch(20% 0.04 250)", "oklch(35% 0.06 250)", "oklch(50% 0.07 250)", "oklch(65% 0.06 250)", "oklch(78% 0.045 250)", "oklch(86% 0.035 250)", "oklch(90% 0.03 250)", "oklch(97% 0.01 250)"] },
+      "tint-red": { "role": "tertiary", "displayName": "Highlight Red Tint", "canonical": "#f8d3cf", "tonalRamp": ["oklch(22% 0.04 25)", "oklch(36% 0.06 25)", "oklch(50% 0.07 25)", "oklch(65% 0.06 25)", "oklch(78% 0.05 25)", "oklch(86% 0.04 25)", "oklch(89% 0.035 25)", "oklch(97% 0.01 25)"] },
+      "tint-yellow": { "role": "tertiary", "displayName": "Diagram Yellow Tint", "canonical": "#fbe38a", "tonalRamp": ["oklch(24% 0.04 95)", "oklch(38% 0.07 95)", "oklch(54% 0.09 95)", "oklch(68% 0.11 95)", "oklch(80% 0.12 95)", "oklch(87% 0.12 95)", "oklch(92% 0.11 95)", "oklch(97% 0.04 95)"] },
+      "tint-green": { "role": "tertiary", "displayName": "Highlight Green Tint", "canonical": "#d3ead5", "tonalRamp": ["oklch(20% 0.03 145)", "oklch(34% 0.05 145)", "oklch(50% 0.06 145)", "oklch(65% 0.05 145)", "oklch(78% 0.04 145)", "oklch(86% 0.035 145)", "oklch(91% 0.03 145)", "oklch(97% 0.01 145)"] },
+      "paper-white": { "role": "neutral", "displayName": "Paper White", "canonical": "#ffffff", "tonalRamp": ["oklch(18% 0 0)", "oklch(30% 0 0)", "oklch(42% 0 0)", "oklch(54% 0 0)", "oklch(66% 0 0)", "oklch(78% 0 0)", "oklch(90% 0 0)", "oklch(100% 0 0)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The name across the hero and the footer 'Say hello'; uppercase, fitted to full width." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles and the services list; uppercase." },
+      "title": { "displayName": "Title", "purpose": "Project names, case-study section headings, contact card title; uppercase." },
+      "lead": { "displayName": "Lead", "purpose": "Hero role line, about prose, case-study lead." },
+      "body": { "displayName": "Body", "purpose": "Reading text, 44 to 68ch." },
+      "label": { "displayName": "Label", "purpose": "Navigation, tags, captions, metadata, form labels, data panels; sentence case, no tracking." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Default for presses, hovers, entrances and image drift." },
+      { "name": "ease-in-out", "value": "cubic-bezier(0.77, 0, 0.175, 1)", "purpose": "Clip-path image reveals (850ms)." },
+      { "name": "press", "value": "160ms", "purpose": "Press feedback: scale(0.97) on buttons, 0.98 on tiles." },
+      { "name": "reveal", "value": "opacity 700ms, translateY(24px) 900ms, 80ms stagger", "purpose": "Section entrances; content visible without JS; reduced motion removes movement." }
+    ],
+    "breakpoints": [
+      { "name": "stack", "value": "899px" },
+      { "name": "phone", "value": "760px" },
+      { "name": "narrow", "value": "560px" },
+      { "name": "max", "value": "1440px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Default solid action: indigo fill, turns Uno blue on hover, arrow nudges right.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Read the case study <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border: 0; border-radius: var(--radius, 6px); background: var(--ink, #141826); color: var(--bg, #f5f6f8); font-family: 'Red Hat Text', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 1.0625rem; line-height: 1.1; text-decoration: none; cursor: pointer; transition: transform 160ms cubic-bezier(0.23,1,0.32,1), background-color 200ms ease; } .ds-btn svg { width: 18px; height: 18px; transition: transform 200ms cubic-bezier(0.23,1,0.32,1); } .ds-btn:hover { background: var(--blue, #0f5fa6); color: #fff; } .ds-btn:hover svg { transform: translateX(3px); } .ds-btn:active { transform: scale(0.97); } .ds-btn:focus-visible { outline: 3px solid var(--blue, #0f5fa6); outline-offset: 3px; }"
+    },
+    {
+      "name": "Accent Button",
+      "kind": "button",
+      "refersTo": "button-accent",
+      "description": "The single lead action in a view: Uno blue fill, turns indigo on hover.",
+      "html": "<a class=\"ds-btn-accent\" href=\"#\">See my projects</a>",
+      "css": ".ds-btn-accent { display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; border-radius: var(--radius, 6px); background: var(--blue, #0f5fa6); color: #fff; font-family: 'Red Hat Text', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 1.0625rem; text-decoration: none; transition: transform 160ms cubic-bezier(0.23,1,0.32,1), background-color 200ms ease; } .ds-btn-accent:hover { background: var(--ink, #141826); } .ds-btn-accent:active { transform: scale(0.97); } .ds-btn-accent:focus-visible { outline: 3px solid var(--blue, #0f5fa6); outline-offset: 3px; }"
+    },
+    {
+      "name": "Light Button on Field",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "Action on a dark or saturated field: cool-white fill, motor yellow on hover.",
+      "html": "<div class=\"ds-field\"><a class=\"ds-btn-light\" href=\"#\">Start a project</a></div>",
+      "css": ".ds-field { padding: 24px; background: var(--blue, #0f5fa6); } .ds-btn-light { display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; border-radius: var(--radius, 6px); background: var(--bg, #f5f6f8); color: var(--ink, #141826); font-family: 'Red Hat Text', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 1.0625rem; text-decoration: none; transition: transform 160ms cubic-bezier(0.23,1,0.32,1), background-color 200ms ease; } .ds-btn-light:hover { background: var(--yellow, #f4c20d); } .ds-btn-light:active { transform: scale(0.97); } .ds-btn-light:focus-visible { outline: 3px solid var(--yellow, #f4c20d); outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Inline action with a 2px underline that retracts on hover.",
+      "html": "<a class=\"ds-link\" href=\"#\">Contact me</a>",
+      "css": ".ds-link { position: relative; display: inline-block; padding-bottom: 3px; color: var(--ink, #141826); font-family: 'Red Hat Text', 'Segoe UI', system-ui, sans-serif; font-weight: 500; text-decoration: none; } .ds-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: currentColor; transform-origin: right; transition: transform 260ms cubic-bezier(0.23,1,0.32,1); } .ds-link:hover::after { transform: scaleX(0); } .ds-link:focus-visible { outline: 3px solid var(--blue, #0f5fa6); outline-offset: 3px; }"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Static technology tag on a grey surface.",
+      "html": "<ul class=\"ds-tags\"><li>React 19</li><li>Vite</li><li>Plain CSS</li></ul>",
+      "css": ".ds-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; } .ds-tags li { padding: 4px 10px; border-radius: var(--radius, 6px); background: var(--surface, #e9ebef); color: var(--ink, #141826); font-family: 'Red Hat Text', 'Segoe UI', system-ui, sans-serif; font-size: 0.8125rem; font-weight: 500; }"
+    },
+    {
+      "name": "Text Field on Red Card",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Borderless white field with an inset ink outline on focus.",
+      "html": "<div class=\"ds-card\"><label class=\"ds-label\" for=\"ds-name\">Your name</label><input class=\"ds-input\" id=\"ds-name\" placeholder=\"e.g. Ada Okafor\"></div>",
+      "css": ".ds-card { display: grid; gap: 6px; padding: 24px; border-radius: var(--radius, 6px); background: var(--red, #c8232c); color: #fff; font-family: 'Red Hat Text', 'Segoe UI', system-ui, sans-serif; } .ds-label { font-weight: 700; font-size: 0.8125rem; } .ds-input { min-height: 54px; padding: 14px 16px; border: 0; border-radius: var(--radius, 6px); background: #fff; color: var(--ink, #141826); font: inherit; font-size: 1.0625rem; outline: 2px solid transparent; outline-offset: -2px; transition: outline-color 160ms ease; } .ds-input::placeholder { color: #5b6172; } .ds-input:focus { outline-color: var(--ink, #141826); }"
+    },
+    {
+      "name": "Site Bar",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Name mark left in Display 900 caps, label-size links right turning blue on hover.",
+      "html": "<nav class=\"ds-bar\"><a class=\"ds-mark\" href=\"#\">David Adeyemi</a><ul><li><a href=\"#\">Projects</a></li><li><a href=\"#\">About</a></li><li><a href=\"#\">Services</a></li><li><a href=\"#\">Contact</a></li></ul></nav>",
+      "css": ".ds-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; padding-inline: 24px; background: var(--bg, #f5f6f8); color: var(--ink, #141826); font-family: 'Red Hat Text', 'Segoe UI', system-ui, sans-serif; } .ds-mark { font-family: 'Red Hat Display', 'Segoe UI', system-ui, sans-serif; font-weight: 900; font-size: 1.0625rem; letter-spacing: -0.02em; text-transform: uppercase; text-decoration: none; color: inherit; } .ds-bar ul { display: flex; gap: 24px; margin: 0; padding: 0; list-style: none; } .ds-bar ul a { display: inline-block; padding: 8px 0; font-size: 0.8125rem; font-weight: 500; text-decoration: none; color: inherit; transition: color 160ms ease; } .ds-bar ul a:hover { color: var(--blue, #0f5fa6); } .ds-bar a:focus-visible { outline: 3px solid var(--blue, #0f5fa6); outline-offset: 3px; }"
+    },
+    {
+      "name": "Data Panel",
+      "kind": "card",
+      "refersTo": "data-panel",
+      "description": "White panel carrying real report numbers: bold caption, tabular rows, green total.",
+      "html": "<figure class=\"ds-frag\"><table><caption>Sample results table</caption><thead><tr><th>Class</th><th>Precision</th><th>Recall</th></tr></thead><tbody><tr><th>Class A</th><td>0.00</td><td>0.00</td></tr><tr><th>Class B</th><td>0.00</td><td>0.00</td></tr></tbody><tfoot><tr><th>Total</th><td></td><td>0.00</td></tr></tfoot></table></figure>",
+      "css": ".ds-frag { margin: 0; padding: 20px; border-radius: var(--radius, 6px); background: #fff; color: var(--ink, #141826); font-family: 'Red Hat Text', 'Segoe UI', system-ui, sans-serif; font-size: 0.8125rem; line-height: 1.4; } .ds-frag table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; } .ds-frag caption { margin-bottom: 10px; text-align: left; font-weight: 700; } .ds-frag th, .ds-frag td { padding: 7px 0; text-align: right; border-bottom: 1px solid var(--surface-2, #dde0e6); } .ds-frag th:first-child { text-align: left; font-weight: 500; } .ds-frag thead th { color: var(--muted, #4a5163); font-weight: 500; } .ds-frag tfoot th, .ds-frag tfoot td { border-bottom: 0; font-weight: 700; color: var(--green, #2f7a3b); }"
+    },
+    {
+      "name": "Project Frame",
+      "kind": "custom",
+      "refersTo": "project-frame",
+      "description": "A flat project field with a screenshot inset top-left and cropped by the frame; drifts on hover.",
+      "html": "<a class=\"ds-frame\" href=\"#\" aria-label=\"Project\"><span class=\"ds-shot\"></span></a>",
+      "css": ".ds-frame { position: relative; display: block; width: 320px; height: 240px; overflow: hidden; border-radius: 0 var(--radius, 6px) var(--radius, 6px) 0; background: var(--green, #2f7a3b); } .ds-shot { position: absolute; top: 9%; left: 7%; width: 86%; height: 110%; border-radius: var(--radius, 6px); background: var(--bg, #f5f6f8); transition: transform 900ms cubic-bezier(0.23,1,0.32,1); } .ds-frame:hover .ds-shot { transform: translate(-1.2%, -1.2%) scale(1.015); } .ds-frame:focus-visible { outline: 3px solid var(--yellow, #f4c20d); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Parts Bench",
+    "overview": "A cool, well-lit bench with the work laid out on it. The ground is near-white and the ink is indigo-black; colour arrives only as whole flat fields borrowed from the projects themselves: the Arduino Uno's blue, the L298N driver's red, the DC motor's yellow, CocoaCare's green, and Aso & Thread's etu night. Each field is a place (a section, a project frame, the contact card, the footer), never a glow, a gradient or a decoration.\n\nType does the shouting. Red Hat Display at weight 900, set in tight uppercase, carries the name, section titles and the closing \"Say hello\" at poster scale; Red Hat Text carries everything read. Between the two there is generous air: sections are separated by large vertical gaps, and projects are shown as one oversized framed visual beside a compact text cluster, not as a card grid.\n\nProof is presented as interface: real screenshots inside coloured frames, wiring diagrams multiplied onto pale tints so their white paper disappears, and small white data panels holding the real report numbers and parts lists. Surfaces are flat at rest; motion is quick, eased-out, and confined to state and entrance.",
+    "keyCharacteristics": [
+      "Cool white ground, indigo ink, four project-derived saturated fields plus etu, used as whole areas.",
+      "Red Hat Display 900 uppercase for display; Red Hat Text for reading.",
+      "One radius (6px) for nearly everything; flat fills, no shadows.",
+      "Large asymmetric 12-column compositions with oversized media.",
+      "Work shown as real artefacts: screenshots, multiplied diagrams, white data panels."
+    ],
+    "rules": [
+      { "name": "The Whole Field Rule", "body": "A saturated colour appears as a complete flat area that owns a section or frame, or as a small solid mark (dot, bar, button). Never as a glow, gradient, tinted shadow, or border accent.", "section": "colors" },
+      { "name": "The Paired Ink Rule", "body": "Every field has one fixed ink: white on blue, red and green; indigo on yellow; etu paper on etu night. Focus rings switch to motor yellow on any dark field.", "section": "colors" },
+      { "name": "The Borrowed Palette Rule", "body": "New fields come from a project's own hardware or interface, not from a colour wheel.", "section": "colors" },
+      { "name": "The Two Voices Rule", "body": "Display is 900, uppercase, tightly tracked; text is sentence case with zero tracking. Never set Red Hat Text in caps, and never letterspace small labels.", "section": "typography" },
+      { "name": "The Tabular Proof Rule", "body": "Every number that comes from a report, price or quantity uses tabular numerals.", "section": "typography" },
+      { "name": "The Flat Bench Rule", "body": "Nothing floats. If an element needs separation, give it a different flat ground, not a shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do give every saturated colour a whole area or a solid mark, with its fixed paired ink.",
+      "Do keep a single 6px radius on all new containers, controls and media.",
+      "Do set display type in Red Hat Display 900 uppercase with negative tracking, and reading type in Red Hat Text sentence case.",
+      "Do show proof as real artefacts: screenshots in coloured frames, diagrams multiplied onto tints, numbers in white data panels with tabular numerals.",
+      "Do confine hover effects to `(hover: hover) and (pointer: fine)` and give every animation a reduced-motion fallback.",
+      "Do use the ease-out curve `cubic-bezier(0.23, 1, 0.32, 1)` with a 160ms press scale of 0.97."
+    ],
+    "donts": [
+      "Don't add drop shadows, glows or gradients; separate with flat grounds.",
+      "Don't arrange projects as a grid of identical cards; give each its own oversized frame.",
+      "Don't put a small uppercase or letterspaced label above a heading.",
+      "Don't reuse the order builder's sanyan, etu-square or alaari styling outside that embedded panel.",
+      "Don't draw borders around containers; the only rules are the 1px rows inside data panels."
+    ]
+  }
+}
