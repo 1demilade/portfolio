@@ -16,6 +16,7 @@ npm run preview   # serve the production build at http://localhost:4173/portfoli
 | Route | Page |
 | --- | --- |
 | `/` | Home: hero, projects, about, skills, services, contact |
+| `/projects/exemplar-engineering` | Case study with screenshots of the ground picker, projects, project page and contact form |
 | `/projects/aso-and-thread` | Case study with a working copy of the WhatsApp order panel |
 | `/projects/cocoacare` | Case study with results from the B.Eng report |
 | `/projects/obstacle-avoidance-robot` | Case study with wiring diagram, parts and demo video |
@@ -44,4 +45,4 @@ public/                favicon, social preview image, CocoaCare report PDF
 
 ## Credits
 
-Photographs of components and cocoa are from Wikimedia Commons and are credited beside each photo on its case-study page: Suyash Dwivedi (CC BY-SA 4.0), Ridzaina (CC BY-SA 4.0), Bernard Gagnon (CC BY-SA 3.0). Aso & Thread screenshots show that project's Unsplash photography, credited on the Aso & Thread site itself. Fonts: Red Hat Display and Red Hat Text (SIL Open Font License), self-hosted through `@fontsource`.
+Photographs of components and cocoa are from Wikimedia Commons and are credited beside each photo on its case-study page: Suyash Dwivedi (CC BY-SA 4.0), Ridzaina (CC BY-SA 4.0), Bernard Gagnon (CC BY-SA 3.0). Aso & Thread screenshots show that project's Unsplash photography, credited on the Aso & Thread site itself. Exemplar Engineering screenshots show that project's Wikimedia Commons and other open-licence photography, credited on its Image credits page. Fonts: Red Hat Display and Red Hat Text (SIL Open Font License), self-hosted through `@fontsource`.

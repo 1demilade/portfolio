@@ -91,7 +91,7 @@ function Hero() {
   )
 }
 
-const FIELD_TINT = { etu: 'etu', green: 'green', yellow: 'tint-yellow', blue: 'tint-blue' }
+const FIELD_TINT = { red: 'red', etu: 'etu', green: 'green', yellow: 'tint-yellow', blue: 'tint-blue' }
 
 function Work() {
   return (
@@ -101,7 +101,7 @@ function Work() {
           Projects
         </h2>
         <p className="work__note" data-reveal style={{ '--i': 1 }}>
-          One website I designed and built end to end, one machine learning web app, and two robots I wired and
+          Two websites I designed and built end to end, one machine learning web app, and two robots I wired and
           programmed.
         </p>
       </div>
@@ -120,7 +120,7 @@ function Work() {
 
           <div className="work__cluster">
             <div className="work__detail" data-reveal>
-              {p.slug === 'aso-and-thread' && (
+              {p.detail && (
                 <Shot image={p.detail} sizes="(min-width: 900px) 30vw, 70vw" className="work__detail-shot" />
               )}
               {p.slug === 'cocoacare' && <ResultsCard results={p.results} compact />}

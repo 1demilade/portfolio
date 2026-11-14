@@ -1,6 +1,16 @@
-// Every fact here comes from the project itself: the Aso & Thread source, the old
+// Every fact here comes from the project itself: the Exemplar and Aso & Thread sources, the old
 // portfolio's case studies, the Fritzing diagrams and the B.Eng project report (June 2025).
 
+import exHome800 from '../assets/img/exemplar-home-800.webp'
+import exHome1440 from '../assets/img/exemplar-home-1440.webp'
+import exGround800 from '../assets/img/exemplar-ground-800.webp'
+import exGround1440 from '../assets/img/exemplar-ground-1440.webp'
+import exProjects800 from '../assets/img/exemplar-projects-800.webp'
+import exProjects1440 from '../assets/img/exemplar-projects-1440.webp'
+import exProject800 from '../assets/img/exemplar-project-800.webp'
+import exProject1440 from '../assets/img/exemplar-project-1440.webp'
+import exContact800 from '../assets/img/exemplar-contact-800.webp'
+import exContact1440 from '../assets/img/exemplar-contact-1440.webp'
 import asoHome800 from '../assets/img/aso-home-800.webp'
 import asoHome1440 from '../assets/img/aso-home-1440.webp'
 import asoProduct800 from '../assets/img/aso-product-800.webp'
@@ -49,6 +59,48 @@ const img = (small, large, width, height, alt) => ({
 
 export const PROJECTS = [
   {
+    slug: 'exemplar-engineering',
+    title: 'Exemplar Engineering',
+    kind: 'Engineering firm website',
+    status: 'Self-initiated concept project',
+    year: '2026',
+    field: 'red',
+    lead: 'A website for a fictional Lagos structural engineering and construction firm, with filterable projects and a picker that explains the ground under each part of the city.',
+    role: 'Design and front-end development',
+    stack: ['React 19', 'Vite', 'React Router', 'JavaScript', 'Plain CSS', 'Lucide icons'],
+    links: [
+      { label: 'Live site', href: 'https://1demilade.github.io/exemplar/' },
+      { label: 'Code on GitHub', href: 'https://github.com/1demilade/exemplar' },
+    ],
+    hero: img(exHome800, exHome1440, 1440, 900, 'The Exemplar Engineering home page: “Engineering you can stand on.” in tall white capitals over a photograph of a steel frame under construction, with an orange Explore projects button'),
+    detail: {
+      ...img(exGround800, exGround1440, 1440, 900, 'The “First, the ground” picker: four Lagos areas as tabs, notes on the ground and what to check first, and a coloured soil profile with the water table marked'),
+      caption: 'First, the ground: choose an area of Lagos to see its soil and what an engineer checks first.',
+    },
+    gallery: [
+      img(exProjects800, exProjects1440, 1440, 900, 'The Projects page, filtered by Residential, Commercial, Industrial and Structural, with large photo cards'),
+      img(exProject800, exProject1440, 1440, 900, 'A project page for Lekki Courtyard Residences, with a full-bleed photograph and an orange notice that the project is conceptual'),
+      img(exContact800, exContact1440, 1440, 900, 'The Contact form, showing an error summary and a message under each field that needs fixing'),
+    ],
+    overview: [
+      'Exemplar Engineering is a website I designed and built for an imaginary firm that designs, builds and repairs concrete and steel structures in Lagos. The brief I set myself was to make it read like a credible engineering consultancy: image-led, typographically confident, and written to explain engineering reasoning rather than make claims.',
+      'It has a Home page, About, Services, a filterable Projects page with eight conceptual projects and a detail page for each, Contact, and an Image credits page.',
+    ],
+    features: [
+      ['Lagos ground picker', 'Choose an area of Lagos to see its typical ground, what that means for a building and what an engineer checks first, beside a soil profile drawn in HTML and CSS. It is a keyboard-operable tablist.'],
+      ['Filterable projects', 'Filter by Residential, Commercial, Industrial or Structural. The filter lives in the URL, and cards animate into place with the View Transitions API where the browser supports it.'],
+      ['Project pages', 'A data sheet, scope of work, gallery and engineering considerations for each project. The card’s photo morphs into the hero of the page you open.'],
+      ['Services that lead somewhere', 'Five services, each with a plain explanation, typical scope and when you need it. Each call to action preselects the matching project type on the contact form.'],
+      ['Honest contact form', 'Errors appear as you leave a field and in a focused summary on submit. A valid message says plainly that nothing was sent.'],
+      ['Accessible and quick', 'Skip link, visible focus, a focus-trapped mobile menu, a pausable hero slideshow, reduced-motion support, responsive WebP images and about 128 KB of gzipped JavaScript.'],
+    ],
+    approach: [
+      'The look comes from a building site: a concrete off-white ground, graphite ink, concrete-grey steps between them and one safety-orange accent kept for actions and active states. Headlines are set in Barlow Condensed and text in Barlow, corners are square, and filled bars stand in for hairline rules.',
+      'Motion is restrained: short ease-out transitions, a small press response on buttons and hover effects only for a mouse or trackpad. Every page was checked at 1440, 768, 390 and 360 pixels wide for layout, contrast, keyboard use and reduced motion.',
+    ],
+    honesty: 'Exemplar Engineering is fictional. Its projects are conceptual demonstrations, not completed contracts, its contact details are placeholders and the form sends nothing. The photographs are licensed third-party images from Wikimedia Commons and other open collections, credited on the site, and none shows the firm’s own work.',
+  },
+  {
     slug: 'aso-and-thread',
     title: 'Aso & Thread',
     kind: 'Fashion brand website',
@@ -63,7 +115,10 @@ export const PROJECTS = [
       { label: 'Code on GitHub', href: 'https://github.com/1demilade/aso-thread' },
     ],
     hero: img(asoHome800, asoHome1440, 1440, 900, 'The Aso & Thread home page: four tall strips of fashion photography beside the line “Ready-to-wear, contemporary and traditional Nigerian dress, cut in Lagos”, over the name in giant capitals'),
-    detail: img(asoProduct800, asoProduct1440, 1440, 900, 'An Aso & Thread product page for the Ọlá Agbada Set with colour swatches, size buttons, a quantity stepper and the WhatsApp message panel'),
+    detail: {
+      ...img(asoProduct800, asoProduct1440, 1440, 900, 'An Aso & Thread product page for the Ọlá Agbada Set with colour swatches, size buttons, a quantity stepper and the WhatsApp message panel'),
+      caption: 'Product page: colour, size and quantity build the order.',
+    },
     gallery: [
       img(asoCollections800, asoCollections1440, 1440, 900, 'The Collections page with filters for collection, audience and sort order'),
       img(asoAbout800, asoAbout1440, 1440, 900, 'The About page, headed “Cut in Lagos”'),

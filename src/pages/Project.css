@@ -97,6 +97,9 @@
   border-radius: var(--radius);
 }
 
+.case__hero--red {
+  background: var(--red);
+}
 .case__hero--etu {
   background: var(--etu);
 }

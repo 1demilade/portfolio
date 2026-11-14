@@ -70,7 +70,7 @@ export default function Project() {
           ))}
         </Section>
 
-        {project.slug === 'aso-and-thread' && <AsoSections project={project} />}
+        {project.features && <WebsiteSections project={project} />}
         {project.slug === 'cocoacare' && <CocoaSections project={project} />}
         {project.steps && <RobotSections project={project} />}
 
@@ -191,29 +191,14 @@ function Rows({ rows }) {
   )
 }
 
-function AsoSections({ project }) {
+function WebsiteSections({ project }) {
   return (
     <>
       <Section title="What it does">
         <Rows rows={project.features} />
       </Section>
 
-      <section className="case__try field-etu" aria-labelledby="try-title">
-        <div className="case__try-inner frame">
-          <div className="case__try-head" data-reveal>
-            <h2 id="try-title" className="case__h2">
-              Try the order panel
-            </h2>
-            <p>
-              This is the product page’s order panel, running on the same message code as the real site. Pick a colour,
-              a size and a quantity and watch the WhatsApp message rewrite itself.
-            </p>
-          </div>
-          <div data-reveal style={{ '--i': 1 }}>
-            <OrderBuilder />
-          </div>
-        </div>
-      </section>
+      {project.slug === 'aso-and-thread' && <OrderDemo />}
 
       <Section title="Design approach">
         {project.approach.map((p) => (
@@ -224,7 +209,7 @@ function AsoSections({ project }) {
       <div className="case__gallery frame">
         <figure className="case__gallery-main" data-reveal="clip">
           <Shot image={project.detail} sizes="(min-width: 900px) 66vw, 100vw" />
-          <figcaption>Product page: colour, size and quantity build the order.</figcaption>
+          <figcaption>{project.detail.caption}</figcaption>
         </figure>
         {project.gallery.map((g, i) => (
           <figure key={g.src} data-reveal="clip" style={{ '--i': i + 1 }}>
@@ -234,6 +219,27 @@ function AsoSections({ project }) {
         ))}
       </div>
     </>
+  )
+}
+
+function OrderDemo() {
+  return (
+    <section className="case__try field-etu" aria-labelledby="try-title">
+      <div className="case__try-inner frame">
+        <div className="case__try-head" data-reveal>
+          <h2 id="try-title" className="case__h2">
+            Try the order panel
+          </h2>
+          <p>
+            This is the product page’s order panel, running on the same message code as the real site. Pick a colour, a
+            size and a quantity and watch the WhatsApp message rewrite itself.
+          </p>
+        </div>
+        <div data-reveal style={{ '--i': 1 }}>
+          <OrderBuilder />
+        </div>
+      </div>
+    </section>
   )
 }
 

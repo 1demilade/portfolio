@@ -145,7 +145,7 @@
 .hero__strip {
   grid-area: strip;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -263,7 +263,13 @@
 .work__block--4 .work__visual {
   --h: 72svh;
 }
+.work__block--5 .work__visual {
+  --h: 64svh;
+}
 
+.work__visual--red {
+  background: var(--red);
+}
 .work__visual--etu {
   background: var(--etu);
 }
@@ -637,7 +643,8 @@
   .work__visual,
   .work__block--2 .work__visual,
   .work__block--3 .work__visual,
-  .work__block--4 .work__visual {
+  .work__block--4 .work__visual,
+  .work__block--5 .work__visual {
     grid-column: 1;
     height: auto;
     aspect-ratio: 5 / 4;
@@ -720,6 +727,11 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-self: end;
     padding-bottom: 20px;
+  }
+
+  /* Five tiles: the newest project takes the full width so the rest pair up */
+  .hero__strip li:first-child {
+    grid-column: 1 / -1;
   }
 
   .hero__tile-media {
